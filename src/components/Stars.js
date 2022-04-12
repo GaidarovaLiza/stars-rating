@@ -7,10 +7,8 @@ export default function Stars(props) {
 			<li>
 				{props.count <= 0 || props.count > 5 || typeof props.count === 'string'
 					? null
-					:
-					[...Array(props.count)].map((star, i) =>
-						<Star key={i}
-						/>
+					: [...Array(props.count)].map((star, i) =>
+						<Star key={i} />
 					)
 				}
 			</li>
